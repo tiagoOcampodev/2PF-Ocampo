@@ -1,0 +1,11 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      <h1>2PFOcampo</h1>
+    </div>
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" *ngFor="let item of menu" [routerLink]="item.redirect">
+      <span>{{ item.nombre }}</span>
+    </a>
+    <a mat-list-item routerLink="/login"> <mat-icon>logout</mat-icon> <span>Logout</span> </a>
+</mat-nav-list>
+  

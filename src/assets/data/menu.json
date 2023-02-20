@@ -1,0 +1,6 @@
+[
+    {
+        "nombre": "Inicio",
+        "redirect": "/dashboard/inicio"
+    }
+]
