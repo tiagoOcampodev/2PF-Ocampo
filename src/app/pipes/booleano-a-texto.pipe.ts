@@ -5,8 +5,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class BooleanoATextoPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(valorBooleano: boolean, ...args: any[]): string {
+    return valorBooleano ? args[0] : args[1];
+    
   }
 
 }

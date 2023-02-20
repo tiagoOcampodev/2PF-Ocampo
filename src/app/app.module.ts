@@ -9,21 +9,19 @@ import { SharedModule } from './components/shared/shared.module';
 
 // Componentes 
 import { LoginComponent } from './components/login/login.component';
-import { BooleanoATextoPipe } from './pipes/booleano-a-texto.pipe';
-import { BooleanoEstiloDirective } from './directives/booleano-estilo.directive';
+import { CursosModule } from './components/dashboard/cursos/cursos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    BooleanoATextoPipe,
-    BooleanoEstiloDirective
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    CursosModule
   ],
   providers: [],
   bootstrap: [AppComponent]

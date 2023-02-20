@@ -2,5 +2,13 @@
     {
         "nombre": "Inicio",
         "redirect": "/dashboard/inicio"
+    },
+    {
+        "nombre": "Lista cursos",
+        "redirect": "/dashboard/lista-cursos"
+    },
+    {
+        "nombre": "Agregar curso",
+        "redirect": "/dashboard/agregar-curso"
     }
 ]

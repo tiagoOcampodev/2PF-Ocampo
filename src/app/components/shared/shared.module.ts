@@ -24,6 +24,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [],
@@ -52,6 +55,9 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatGridListModule,
     MatSelectModule,
+    MatDatepickerModule,
+    MatSlideToggleModule,
+    MatNativeDateModule,
   ],
   exports: [
     FormsModule,
@@ -76,6 +82,9 @@ import { MatListModule } from '@angular/material/list';
     MatCardModule,
     MatGridListModule,
     MatSelectModule,
+    MatDatepickerModule,
+    MatSlideToggleModule,
+    MatNativeDateModule,
   ]
 })
 export class SharedModule { }
