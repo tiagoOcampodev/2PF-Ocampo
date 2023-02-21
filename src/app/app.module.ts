@@ -14,7 +14,7 @@ import { CursosModule } from './components/dashboard/cursos/cursos.module';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

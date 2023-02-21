@@ -9,6 +9,7 @@
                 <img class="card-imagen" mat-card-image src="https://parentesis.com/imagesPosts/coder00.jpg" alt="">
                 <mat-card-content>
                     <p>Impartido por {{ curso.profesor.nombre }}</p>
+                    <p>Inicia el  {{ curso.fechaInicio | formatoFecha }} </p>
                     <p [appBooleanoEstilo]="curso.inscripcionAbierta">{{ curso.inscripcionAbierta | booleanoATexto:'Inscripciones abiertas':'Inscripciones cerradas' }}</p>
                 </mat-card-content>
                 <mat-card-actions align="end">

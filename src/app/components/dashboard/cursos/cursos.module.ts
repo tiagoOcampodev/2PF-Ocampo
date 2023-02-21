@@ -10,11 +10,13 @@ import { DetalleCursoComponent } from './detalle-curso/detalle-curso.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CursosService } from './services/cursos.service';
 import { Router } from '@angular/router';
+import { FormatoFechaPipe } from 'src/app/pipes/formato-fecha.pipe';
 
 @NgModule({
   declarations: [
     BooleanoEstiloDirective,
     BooleanoATextoPipe,
+    FormatoFechaPipe,
     ListaCursosComponent,
     AgregarCursoComponent,
     EditarCursoComponent,
