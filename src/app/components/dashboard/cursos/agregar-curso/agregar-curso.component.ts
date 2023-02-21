@@ -23,9 +23,7 @@ export class AgregarCursoComponent implements OnInit{
       fechaFin: new FormControl(),
       fechaInicio: new FormControl(),
       inscripcionAbierta: new FormControl(),
-      nombre: new FormControl(),
-      profesor: new FormControl(),
-      profesorCorreo: new FormControl()
+      nombre: new FormControl()
     })
   }
 
@@ -37,8 +35,8 @@ export class AgregarCursoComponent implements OnInit{
       fechaFin: this.formulario.value.fechaFin,
       inscripcionAbierta: this.formulario.value.inscripcionAbierta,
       profesor: {
-        nombre: this.formulario.value.profesor,
-        correo: this.formulario.value.profesorCorreo,
+        nombre: 'Abner',
+        correo: 'abner@gmail.com',
         fechaRegistro: new Date()
       }
     }
