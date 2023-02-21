@@ -1,0 +1,157 @@
+<div class="container app">
+  <!-- Contiene el formulario  -->
+  <div class="row">
+    <div class="col-sm-8">
+        <mat-toolbar class="text-center"><h2>Añadir Usuario</h2></mat-toolbar>
+    </div>
+    <form class="form-horizontal">
+        <div class="mb-3">
+          <label for="name" class="control-label col-sm-2">
+            Nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"
+            name="name" [(ngModel)]="model.nombre"
+            placeholder="Ingresa un nombre"
+            >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="position" class="control-label col-sm-2">
+            Curso
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"
+            name="position" [(ngModel)]="model.curso"
+            placeholder="Ingresa el curso"
+            >
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="position" class="control-label col-sm-2">
+              Comision
+            </label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="name"
+              name="position" [(ngModel)]="model.comision"
+              placeholder="Ingresa el curso"
+              >
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="control-label col-sm-2">
+            Email
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="email"
+            name="email" [(ngModel)]="model.email"
+            placeholder="Ingresa un email"
+            >
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" mat-raised-button color="primary" (click)="addEmployee()">
+              Agregar
+            </button>
+          </div>
+        </div>
+    </form>
+  <!-- Contiene la tabla y el campo de edicion de datos  -->
+
+  <div class="row">
+    <!-- Contiene la tabla de datos  -->
+    <div class="mat-elevation-z8 col-sm-8">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Curso</th>
+            <th>Comision</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let usuario of usuarios; let i = index">
+            <td>{{usuario.nombre}}</td>
+            <td>{{usuario.curso}}</td>
+            <td>{{usuario.comision}}</td>
+            <td>{{usuario.email}}</td>
+            <td>
+              <a class="button-actions" color="accent">
+                <mat-icon color="accent">search</mat-icon>
+              </a>
+              <a class="button-actions" color="primary" (click)="editEmployee(i)">
+                <mat-icon color="primary">edit</mat-icon>
+              </a>
+              <a class="button-actions" (click)="deleteEmployee(i)">
+                <mat-icon color="warn">delete</mat-icon>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 8, 10, 15]" aria-label="Select page of users"></mat-paginator>
+        
+    </div>
+    <!-- Columna de edicion de datos  -->
+    <div class="col-sm-4" [hidden]="hideUpdate">
+    <mat-toolbar class="text-center"><h2>Actualizar Datos</h2></mat-toolbar>
+      <form class="form-horizontal">
+        <div class="mb-3">
+          <label for="name" class="control-label col-sm-2">
+            Nombre
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"
+            name="name" [(ngModel)]="model2.nombre"
+            placeholder="Ingresa un nombre"
+            >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="position" class="control-label col-sm-2">
+            Curso
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"
+            name="curso" [(ngModel)]="model2.curso"
+            placeholder="Ingresa un curso"
+            >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="comision" class="control-label col-sm-2">
+            Comision
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="name"
+            name="position" [(ngModel)]="model2.comision"
+            placeholder="Ingresa una comision"
+            >
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="control-label col-sm-2">
+            Email
+          </label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="email"
+            name="email" [(ngModel)]="model2.email"
+            placeholder="Agrega un email"
+            >
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="col-sm-10 col-sm-offset-2">
+            <button type="submit" mat-raised-button color="accent" (click)="updateEmployee()">
+              Guardar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

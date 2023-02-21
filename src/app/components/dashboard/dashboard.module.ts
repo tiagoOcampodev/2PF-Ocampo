@@ -7,6 +7,8 @@ import { DashboardComponent } from './dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 
 @NgModule({
@@ -15,11 +17,14 @@ import { HeaderComponent } from './header/header.component';
     InicioComponent,
     SidebarComponent,
     HeaderComponent,
+    UsuariosComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class DashboardModule { }

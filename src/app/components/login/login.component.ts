@@ -27,7 +27,7 @@ export class LoginComponent {
     const usuario = this.form.value.usuario;
     const password = this.form.value.password;
 
-    if(usuario == 'tiago' && password == '2109') {
+    if(usuario == 'user' && password == '1234') {
       // Redireccion al home 
       this.fakeLoading();
     }else{

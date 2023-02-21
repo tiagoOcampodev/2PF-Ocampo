@@ -21,7 +21,7 @@ import { CursosModule } from './components/dashboard/cursos/cursos.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    CursosModule
+    CursosModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

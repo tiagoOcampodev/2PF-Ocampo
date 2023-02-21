@@ -1,0 +1,21 @@
+.app{
+    border-radius: 4px;
+    margin-top: 20px;
+    padding: 30px;
+    background:#fff;
+}
+mat-toolbar{
+    background-color: #211f39;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.button-actions{
+    margin-left: 5px;
+    scale: .9;
+    cursor: pointer;
+}

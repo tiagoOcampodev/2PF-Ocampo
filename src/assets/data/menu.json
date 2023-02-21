@@ -10,5 +10,9 @@
     {
         "nombre": "Agregar curso",
         "redirect": "/dashboard/agregar-curso"
+    },
+    {
+        "nombre": "Panel Inscripciones",
+        "redirect": "/dashboard/usuarios"
     }
 ]
